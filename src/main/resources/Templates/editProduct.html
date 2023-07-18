@@ -1,0 +1,18 @@
+<div style="margin: 2%;"><h2>Edit Product Details: <span th:text="${product.getName()}" ></span></h2></div>
+
+
+<table id="editProducts" class="editTable">
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th colspan="2">Description</th>
+        <th>Price</th>
+    </tr>
+    <tr th:each="product : ${product}" th:id="|row2_${product.getId()}">
+        <td><input type="text" id="newImagepath" th:value="${product.getImagePath()}"/></td>
+        <td><input type="text" id="newName" th:value="${product.getName()}"/></td>
+        <td><input type="text" id="newDescription" th:value="${product.getDescription()}"/></td>
+        <td><input type="text" id="newPrice" th:value="${product.getPrice()}"/></td>
+        <td><button th:onclick="|saveEditProduct(${product.getId()})|" type="reset">Save Changes</button></td>
+    </tr>
+</table>

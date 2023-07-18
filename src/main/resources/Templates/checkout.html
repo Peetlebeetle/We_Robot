@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="code.js"></script>
+    <meta charset="UTF-8">
+    <title>Theseus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="mainContainer" >
+    <nav class="navbar navbar" style="margin: 0">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/"><img class="navbar-brand" src="/images/logo.png" style="padding: 0"></a>
+            </div>
+            <form class="navbar-form navbar-left" action="/search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+                <!--<img class="magGlass" src="/images/search_icon.png" style="padding: 0" width="40px">-->
+            </form>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right" id="">
+                    <li><a href="/account"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                    <li><a href="/checkout"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">MY CART</h1>
+        </div>
+    </section>
+
+
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table table-striped" id="checkoutTable">
+                        <tr th:each="products : ${products}" th:id="|row_${products.id}">
+                            <td><img th:src="'/images/' +${products.getImagepath()}" class="img-thumbnail" alt="thumbnail" style="width: 150px; height: 150px"></td>
+                            <td th:text="${products.getName()}" id="productName" class="checkOutName"></td>
+                            <td th:text="${products.getRatingAsFraction()}" id="productRating" class="checkOutRate"></td>
+                            <td th:text="${products.getPriceAsCurrency()}" id="productPrice" class="checkOutPrice"></td>
+                            <td></td>
+                            <td class="text-right"><button th:onclick="|removeFromCart(${products.getId()})|" class="removeBtn"><img src="/images/xbutton.png" style="height: 70px"></button></td>
+                        </tr>
+                        <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Rating</th>
+                            <th scope="col">Price</th>
+                            <th scope="col"></th>
+                            <th scope="col" class="text-right">Remove</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td>Total</td>
+                            <td class="text-right">€<span th:text="${total}"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col mb-2">
+                <div class="row">
+                    <div class="col-sm-12  col-md-6">
+                        <form action="/">
+                            <button class="contShopBtn">Continue Shopping</button> <!--btn btn-block btn-light-->
+                        </form>
+                    </div>
+                    <div class="col-sm-12 col-md-6 text-right">
+                        <form action="/payment">
+                            <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

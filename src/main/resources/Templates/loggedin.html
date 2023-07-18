@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="code.js"></script>
+    <meta charset="UTF-8">
+    <title>Theseus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="mainContainer">
+    <nav class="navbar navbar" style="margin: 0">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/"><img class="navbar-brand" src="/images/logo.png" style="padding: 0"></a>
+            </div>
+            <form class="navbar-form navbar-left" action="/search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+                <!--<img class="magGlass" src="/images/search_icon.png" style="padding: 0" width="40px">-->
+            </form>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right" id="">
+                    <li><a href="/account"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                    <li><a href="/checkout"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right" id="">
+            <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+            <li><a href="/orders"><span class="glyphicon glyphicon-time"></span> History</a></li>
+        </ul>
+    </div>
+    <!--
+    <a class="nav navbar-nav navbar-right" href="/orders" style="padding-right: 3%">
+        <button type="submit" class="btn btn-primary">View History</button>
+    </a>
+    -->
+    <div class="createNewShop">
+        <h2>Make a Shop?</h2>
+        <span>Wanna be your own boss? Wanna own your own shop?</span>
+        <a href="/shop">Make my Own Shop</a>
+    <!--
+        <form action="/logout" style="margin-top: 5%">
+            <button type="submit" class="btn btn-primary">Log Out</button>
+        </form>
+    -->
+    </div>
+</div>
+</body>
+</html>

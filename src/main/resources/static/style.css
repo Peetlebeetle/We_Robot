@@ -1,0 +1,405 @@
+
+html, body {
+    height: 100%;
+}
+
+.mainContainer {
+    height: 100%;
+    display: block;
+}
+
+.close-up img {
+    padding: 8px 8px;
+    border-radius: 10px;
+    max-width: 500px;
+    height: auto;
+}
+
+.quickBar {
+    height: 3%;
+    display: block;
+    /*border-top: 1px solid hotpink;*/
+}
+
+.mainPage {
+    height: 87%;
+    display: block;
+    /*border-top: 1px solid hotpink;*/
+}
+
+.loginReg {
+    border: 1px solid #D2D8D8;
+    background-color: #3E9DEB;/*#0073AE; #E1E6E6;*/
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 35%;
+    height: 53%;
+    float: left;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.loginSign {
+    border: 1px solid #D2D8D8;
+    background-color: #2D9EF3; /*#21A9C9;*/
+    margin-right: 10%;
+    margin-top: 5%;
+    height: 53%;
+    width: 35%;
+    float: right;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.loginSubmit {
+    background-color: #FFFF00;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 40%;
+    margin-bottom: 2%;
+    margin-top: 5px;
+}
+
+.loginSubmit:Hover {
+    background-color: #E0E000;
+}
+
+.loginTitle {
+    font-family: times;
+    font-size: 45px;
+    color: black;
+}
+
+.loginMsg {
+    font-family: georgia;
+    font-size: 20px;
+    color: #424A4A;
+}
+
+.loginImage {
+    width: 14%;
+    height: auto;
+    margin-left: 43%;
+}
+
+.accInput {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.checkOutTable {
+    border: 1px solid red;
+    background-color: #F8F7E5;/*#EBF4CD;*/
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.checkOutName, .checkOutPrice, .checkOutRate {
+    font-family: arial;
+    font-size: 20px;
+}
+
+
+.contShopBtn {
+    background-color: #BAFDF0;
+    color: black;
+    font-family: arial;
+    font-size: 20px;
+    width: 600px;
+    height: 45px;
+    border: none;
+    border-radius: 10px 10px;
+}
+
+.contShopBtn:Hover {
+    background-color: #AAE7DB;
+}
+
+
+.cartProduct {
+    margin-left: 10%;
+    border: 3px solid grey;
+    width: 33%;
+   /* height: 100%;*/
+    display: inline-block;
+    margin-top: 2%;
+}
+
+.cartProduct button {
+    background-color: Transparent;
+    border: none;
+}
+
+.cartSpan {
+    padding-right: 2.5%;
+    padding-left: 2%;
+}
+
+
+.cartImage {
+    height: 75px;
+}
+
+.removeBtn {
+    /*background-color: #F25151;*/
+    background: none;
+    border: none;
+    border-radius: 15px 15px;
+
+}
+
+.removeBtn:Hover {
+    /*background-color: #D34949;*/
+    background: none;
+    border: none;
+}
+
+.contPayBtn {
+    background-color: black;
+    color: white;
+    font-family: georgia;
+    /*border-radius: 15px 15px; this softens the edges*/
+    float: right;
+    height: 15%;
+    width: 25%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-right: 5%;
+    margin-top: 2%;
+
+}
+
+.contPayBtn:Hover {
+    background-color: #3D3E33;
+}
+
+.seeProdBtn {
+    background-color: black;
+    color: white;
+    font-family: georgia;
+}
+
+.seeProdBtn:Hover {
+    background-color: #3D3E33;
+}
+
+.addCartBtn {
+    background-color: black;
+    color: white;
+    font-family: georgia;
+    font-size: 18px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 100%;
+}
+
+.addCartBtn:Hover {
+    background-color: #3D3E33;
+}
+
+.productInfo {
+   /*border: 3px solid red;*/
+   margin-left: 45%;
+   margin-right: 30%;
+}
+
+.prodImage {
+    float: left;
+    margin-left: 10%;
+}
+
+
+.prodName {
+    color: #000000;
+    font-size: 45px;
+    font-family: georgia;
+}
+
+.priceDisplay {
+    color: #5E5B57;
+    font-size: 30px;
+    font-family: georgia;
+}
+
+.rating {
+    color: #FADC03;
+    font-size: 25px;
+    font-family: georgia;
+    padding-left: 15%;
+}
+
+.priceDisplay, .rating {
+    display: inline-block;
+}
+
+.ratingIndex {
+    color: #FADC03;
+    font-size: 10px;
+    font-family: georgia;
+    /*padding-left: 15%;*/
+}
+
+
+.payDetails {
+    background-color: #86F5EE;
+    width: 20%;
+    height: 500px;
+    margin-top: 5%;
+    border: 2px solid #85CBBE;
+    display: inline-block;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.payTitle {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: georgia;
+    color: #000000;
+}
+
+.payNote {
+    font-size: 20px;
+    font-style: italic;
+    font-family: georgia;
+    color: #7B7979;
+}
+
+.formFName, .formSName, .formEAddress, .formAddress, .formCardNumber, .formCardCVV {
+    font-family: georgia;
+    font-size: 18px;
+}
+
+.payForm {
+    width: 100%;
+}
+
+
+.payBtn {
+    background-color: #629C39;
+    color: #E9F1E4;
+    width: 100%;
+    height: 36px;
+    margin-top: 10px;
+}
+
+.payBtn:Hover {
+    background-color: #577D3C;
+}
+
+.payImagePayPal {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
+    height: 200px;
+    display: inline-block;
+    position: fixed;
+    top: 80px;
+    right: 10px;
+    margin-right: 10px;
+
+}
+
+.payImageVisaMC {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
+    height: 200px;
+    display: inline-block;
+    position: fixed;
+    top: 80px;
+    left: 10px;
+    margin-left: 10px;
+
+}
+
+
+/* The Modal (background) */
+.modalPay {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px;/* Location of the box */
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  /*background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+/* The Close Button */
+.close {
+  float: right;
+  font-size: 50px;
+  padding-top: 10px;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  cursor: pointer;
+}
+
+
+.modalDisplay {
+  padding: 2px 16px;
+  background-color: #FDFFF4; /*C3F799*/
+  color: #5F5F5A/*#5A6155;*/
+}
+
+
+/* Logged in account, create new shop */
+.createNewShop {
+    margin: auto;
+    width: 30%;
+}
+
+.createNewShop {
+    margin: auto;
+    width: 30%;
+}
+
+/*bootstrap for createShop*/
+.btn-product {
+    width: 100%;
+}
+
+
+.blueShopImg {
+    width: 490px;
+    height: 350px;
+}
+
+.welcomeNote {
+    padding-left: 110px;
+}
+
+.editTable, .productTable{
+    margin: 2%;
+    padding: 3%
+    text-align: center;
+}
+
+.shopProductsTitle {
+    background-color: #DBDEFF;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="code.js"></script>
+    <meta charset="UTF-8">
+    <title>Theseus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="mainContainer">
+    <nav class="navbar navbar" style="margin: 0">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/"><img class="navbar-brand" src="/images/logo.png" style="padding: 0"></a>
+            </div>
+            <form class="navbar-form navbar-left" action="/search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+                <!--<img class="magGlass" src="/images/search_icon.png" style="padding: 0" width="40px">-->
+            </form>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right" id="">
+                    <li><a href="/account"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                    <li><a href="/checkout"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="loginReg">
+        <div>
+            <p class="loginTitle">Register:</p>
+            <p class="loginMsg">Login if you already have an account</p>
+        </div>
+        <form action="/save">
+            <div class="form-group">
+                <label for="usr" class="accLabel">Account Name: </label>
+                <input type="text" class="accInput" id="usr" name="username" placeholder="Your name..">
+            </div>
+            <div class="form-group">
+                <label for="pwd" class="accLabel">Password:</label>
+                <input type="password" class="accInput" id="pwd" name="password" placeholder="Your password..">
+                <button onclick="addAccount()" class="loginSubmit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="loginSign">
+        <div>
+            <p class="loginTitle">Login:</p>
+            <p class="loginMsg">Register if you do not have an account</p>
+        </div>
+        <form action="/save">
+            <div class="form-group">
+                <label for="usr" class="accLabel">Account Name: </label>
+                <input type="text" class="accInput" id="usrlogin" name="username" placeholder="Your name..">
+            </div>
+            <div class="form-group">
+                <label for="pwd" class="accLabel">Password:</label>
+                <input type="password" class="accInput" id="pwdlogin" name="password" placeholder="Your password..">
+                <button onclick="submit" class="loginSubmit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <img class="loginImage" src="/images/logo.png">
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="code.js"></script>
+    <meta charset="UTF-8">
+    <title>Theseus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="mainContainer">
+    <nav class="navbar navbar" style="margin: 0">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/"><img class="navbar-brand" src="/images/logo.png" style="padding: 0"></a>
+            </div>
+            <form class="navbar-form navbar-left" action="/search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right" id="">
+                    <li><a href="/account"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                    <li><a href="/checkout"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="quickBar">
+
+    </div>
+
+    <div class="close-up">
+        <img class="prodImage" th:src="'/images/' +${Product.getImagePath()}" alt="gnome image" width="28%">
+        <div class="productInfo">
+            <div class="prodName" th:text="${Product.getName()}"></div>
+            </br>
+            <p th:text="${Product.getDescription()}"></p>
+            </br>
+            <div class="priceDisplay"><p th:text="${Product.getPriceAsCurrency()}"></p></div>
+            <div class="rating"><p th:text="${Product.getRatingStars()}"></p></div>
+            <button th:onclick="addToCart([[${Product.getId()}]],[[${username}]] );" class="addCartBtn">Add to Cart</button>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
+

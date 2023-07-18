@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="code.js"></script>
+    <meta charset="UTF-8">
+    <title>Theseus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="mainContainer">
+    <nav class="navbar navbar" style="margin: 0">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/"><img class="navbar-brand" src="/images/logo.png" style="padding: 0"></a>
+            </div>
+            <form class="navbar-form navbar-left" action="/search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+                <!--<img class="magGlass" src="/images/search_icon.png" style="padding: 0" width="40px">-->
+            </form>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right" id="">
+                    <li><a href="/account"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                    <li><a href="/checkout"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <img class="payImageVisaMC" src="/images/noVisaOrMastercard.jpg">
+
+    <div class="payDetails">
+        <p class="payTitle">Enter Your Details:</p>
+        <p class="payNote">We Accept BuddyPay Only</p>
+        <div class="formFName">
+            <label for="fName">Firstname:</label>
+            <input type="text" class="payForm" id="fName">
+        </div>
+        <div class="formSName">
+            <label for="sName">Surname:</label>
+            <input type="text" class="payForm" id="sName">
+        </div>
+        <div class="formEAddress">
+            <label for="Eaddress">Enter Email Address:</label>
+            <input type="text" class="payForm" id="Eaddress">
+        </div>
+        <div class="formAddress">
+            <label for="address">Enter Full Address:</label>
+            <input type="text" class="payForm" id="address">
+        </div>
+        <div class="formCardNumber">
+            <label for="cNumber">Enter Card Number:</label>
+            <input type="text" class="payForm" id="cNumber">
+        </div>
+        <div class="formCardCVV">
+            <label for="cardCVV">Enter Card CVV:</label>
+            <input type="text" class="payForm" id="cardCVV">
+        </div>
+        <form action="/history">
+            <button class="payBtn" id="payBtn">Pay</button>
+        </form>
+    </div>
+
+    <img class="payImagePayPal" src="/images/noPaypal.PNG">
+
+
+
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modalPay">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modalDisplay">
+                <span class="close">X</span>
+                <h1>BuddyPay</h1>
+                <p>Thank you for using BuddyPay!</p>
+                <p>Payment Confirmed</p>
+                <h3>Here for your mock payment needs</h3>
+                <p></p>
+                <p>You will be redirected in 5 seconds</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+// Get the modal
+
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("payBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
+
+
+
+</div>
+</body>
+</html>
